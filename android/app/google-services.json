@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "533621179814",
+    "project_id": "bocardo-restaurant",
+    "storage_bucket": "bocardo-restaurant.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:533621179814:android:5df6a05bffa843461a3b67",
+        "android_client_info": {
+          "package_name": "com.example.bocardo_restaurant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "533621179814-jrguuj7oai8isq2hd9nrpcrt9urpt3g7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC37TGkqds1wxIu_wmSnZThuI_FgihqgCc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "533621179814-jrguuj7oai8isq2hd9nrpcrt9urpt3g7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
