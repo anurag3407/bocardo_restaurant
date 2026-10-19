@@ -56,7 +56,9 @@ class RestaurantHomePage extends StatelessWidget {
           ),
           const SizedBox(height: 4),
           Text(
-            'Here is how your day looks.',
+            AuthService.instance.currentUser != null
+                ? 'Logged in as ${AuthService.instance.currentUser!.ownerName} (${AuthService.instance.currentUser!.email})'
+                : 'Here is how your day looks.',
             style: t.bodyMedium,
           ),
           const SizedBox(height: 18),

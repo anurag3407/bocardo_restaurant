@@ -164,6 +164,30 @@ class SupabaseAuthService {
     }
   }
 
+  /// Sign In using Google ID Token (Native Google Sign-In integration)
+  Future<RestaurantUser> signInWithGoogleIdToken({
+    required String idToken,
+    String? accessToken,
+  }) async {
+    try {
+      final res = await client.auth.signInWithIdToken(
+        provider: OAuthProvider.google,
+        idToken: idToken,
+        accessToken: accessToken,
+      );
+      final user = res.user;
+      if (user == null) {
+        throw const AuthException('Google Sign-In failed: no user returned.');
+      }
+      return RestaurantUser.fromSupabaseUser(user);
+    } on AuthException catch (e) {
+      throw _mapAuthException(e);
+    } catch (e) {
+      debugPrint('[SupabaseAuth] Google ID token error: $e');
+      throw 'Google Sign-In failed. Please try again.';
+    }
+  }
+
   /// Send a Magic Link (Passwordless OTP) to the user's email
   Future<void> sendMagicLink(String email) async {
     try {
