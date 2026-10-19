@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 import '../services/auth_service.dart';
 import '../services/supabase_auth_service.dart';
 import '../themes/brand.dart';
-import '../widgets/bocardo_lockup.dart';
 
 class SignupPage extends StatefulWidget {
   const SignupPage({super.key});

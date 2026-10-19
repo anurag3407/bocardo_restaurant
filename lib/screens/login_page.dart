@@ -3,8 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import '../services/auth_service.dart';
+import '../services/supabase_auth_service.dart';
 import '../themes/brand.dart';
-import '../widgets/bocardo_lockup.dart';
 
 class LoginPage extends StatefulWidget {
 const LoginPage({super.key});
@@ -87,7 +87,6 @@ class _LoginPageState extends State<LoginPage> {
         try {
           await SupabaseAuthService.instance.signInWithGoogleIdToken(
             idToken: googleAuth.idToken!,
-            accessToken: googleAuth.accessToken,
           );
           debugPrint('GOOGLE LOGIN: Supabase authentication successful');
         } catch (e) {

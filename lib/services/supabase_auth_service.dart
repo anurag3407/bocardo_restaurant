@@ -42,7 +42,7 @@ class SupabaseAuthService {
     try {
       await Supabase.initialize(
         url: SupabaseConfig.supabaseUrl,
-        anonKey: SupabaseConfig.supabasePublishableKey,
+        publishableKey: SupabaseConfig.supabasePublishableKey,
         authOptions: const FlutterAuthClientOptions(
           authFlowType: AuthFlowType.pkce, // RFC 7636 PKCE standard
           autoRefreshToken: true,

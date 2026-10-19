@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import '../config/supabase_config.dart';
 import '../services/supabase_auth_service.dart';
 import '../themes/brand.dart';
